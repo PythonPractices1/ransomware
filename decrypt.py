@@ -21,7 +21,7 @@ for file in files:
     with open(file,"rb") as thefile:
         contents = thefile.read()
     contents_decrypted = Fernet(secretkey).decrypt(contents)
-        with open(file,"wb") as thefile:
-            thefile.write(contents_decrypted)
+    with open(file,"wb") as thefile:
+        thefile.write(contents_decrypted)
             
 
