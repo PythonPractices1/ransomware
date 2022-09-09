@@ -20,7 +20,7 @@ with open("thekey.key", "rb") as key:
 for file in files:
     with open(file,"rb") as thefile:
         contents = thefile.read()
-        contents_decrypted = Fernet(secretkey).decrypt(contents)
+    contents_decrypted = Fernet(secretkey).decrypt(contents)
         with open(file,"wb") as thefile:
             thefile.write(contents_decrypted)
             
